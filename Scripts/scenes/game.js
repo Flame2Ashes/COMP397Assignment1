@@ -33,13 +33,13 @@ var scenes;
             this._gamebg.alpha = 0.5;
             this.addChild(this._gamebg);
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("Test test test", "40px Consolar", "#000000", config.Screen.CENTER_X, 10);
-            this.addChild(this._gameLabel);
+            this._gameLabel1 = new objects.Label("A few days ago, you discovered a cave.", "30px Consolar", "#000000", config.Screen.CENTER_X, 10);
+            this.addChild(this._gameLabel1);
             // Create buttons for scene and add to Game Scene container. Register for onclick events
-            this._gameButton1 = new objects.Button("STAY", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
+            this._gameButton1 = new objects.Button("STAY", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 150);
             this.addChild(this._gameButton1);
             this._gameButton1.on("click", this._onButton1Click, this);
-            this._gameButton2 = new objects.Button("COME", 50, 100);
+            this._gameButton2 = new objects.Button("COME", 120, config.Screen.CENTER_Y + 150);
             this.addChild(this._gameButton2);
             this._gameButton2.on("click", this._onButton2Click, this);
             // Add gamescene to main stage container. 

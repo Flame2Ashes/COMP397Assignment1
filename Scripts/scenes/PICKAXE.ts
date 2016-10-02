@@ -1,19 +1,5 @@
-//Decision made: STAY
-/*"No."
-
-"But-"
-
-"//No//, and that's final. Just stay here and watch, okay?"
-
-Your brother dejectedly kicks a stone. "Fine, okay."
-
-And with that, you enter the cave.
-
-The further you get from the mouth of the cave, the darker it gets. Eventually it is pitch black, but you see that there is a faint, but clear light in the distance. You can feasibly walk towards it, but you are not sure whether there are other things in the cave.
-*/
-
 module scenes {
-    export class STAY extends objects.Scene {
+    export class PICKAXE extends objects.Scene {
          // PRIVATE VARIABLES
         private _gameLabel : objects.Label; //Text
         private _gameButton1 : objects.Button; //Option 1
@@ -30,7 +16,7 @@ module scenes {
             console.log("Game scene started");
 
             //Add background
-            this._gamebg = new createjs.Bitmap(assets.getResult("Scene2"));
+            this._gamebg = new createjs.Bitmap(assets.getResult("Scene3"));
             this._gamebg.alpha = 0.5;
             this.addChild(this._gamebg);
             // Create Label for scene and add to Game Scene container
@@ -38,11 +24,11 @@ module scenes {
             this.addChild(this._gameLabel);
 
             // Create buttons for scene and add to Game Scene container. Register for onclick events
-            this._gameButton1 = new objects.Button("TORCH", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 150);
+            this._gameButton1 = new objects.Button("LEFT", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 150);
             this.addChild(this._gameButton1);
             this._gameButton1.on("click", this._onButton1Click, this);
 
-            this._gameButton2 = new objects.Button("LIGHT", 120, config.Screen.CENTER_Y + 150);
+            this._gameButton2 = new objects.Button("RIGHT", 120, config.Screen.CENTER_Y + 150);
             this.addChild(this._gameButton2);
             this._gameButton2.on("click", this._onButton2Click, this);
 
@@ -56,12 +42,12 @@ module scenes {
 
         private _onButton1Click(event : createjs.MouseEvent) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.TORCH;
+            scene = config.Scene.LEFTA;
             changeScene();
         }
 
         private _onButton2Click(event : createjs.MouseEvent) {
-            scene = config.Scene.LIGHT;
+            scene = config.Scene.RIGHTA;
             changeScene();
         }
     }

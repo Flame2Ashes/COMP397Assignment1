@@ -11,8 +11,6 @@ var scene: number;
 // Game scenes
 var menuScene : scenes.Menu;
 var gameScene : scenes.Game;
-var COMEScene : scenes.COME;
-var STAYScene : scenes.STAY;
 
 // Preload Assets required
 var assetData:objects.Asset[] = [
@@ -22,8 +20,19 @@ var assetData:objects.Asset[] = [
     {id: "GameOver", src:"../../Assets/images/gameover.png"},
     {id: "Mario", src:"../../Assets/images/mario.png"},
     {id: "CaveEntrance", src: "../../Assets/images/CaveEntrance.jpg"},
+    {id: "Scene2", src: "../../Assets/images/Scene2.jpg"},
+    {id: "Scene3", src: "../../Assets/images/Scene3.jpg"},
+    {id: "Scene4Left", src: "../../Assets/images/Scene4LEFT.jpg"},
+    {id: "Scene4Right", src: "../../Assets/images/Scene4RIGHT.jpg"},
     {id: "COME", src: "../../Assets/images/COME.png"},
-    {id: "STAY", src: "../../Assets/images/STAY.png"}
+    {id: "STAY", src: "../../Assets/images/STAY.png"},
+    {id: "SHOVEL", src: "../../Assets/images/SHOVEL.png"},
+    {id: "PICKAXE", src: "../../Assets/images/PICKAXE.png"},
+    {id: "TORCH", src: "../../Assets/images/TORCH.png"},
+    {id: "LIGHT", src: "../../Assets/images/LIGHT.png"},
+    {id: "LEFT", src: "../../Assets/images/LEFT.png"},
+    {id: "RIGHT", src: "../../Assets/images/RIGHT.png"},
+    {id: "STARTOVER", src: "../../Assets/images/STARTOVER.png"}
 ];
 
 function preload() {
@@ -83,16 +92,80 @@ function changeScene() : void {
             currentScene = new scenes.Gameover();
             console.log("Starting GAMEOVER scene");
             break;
-        case config.Scene.COME :
-            stage.removeAllChildren();
-            currentScene = new scenes.COME();
-            console.log("Starting COME scene");
-            break;
+            //Scene 1 decisions
         case config.Scene.STAY :
             stage.removeAllChildren();
             currentScene = new scenes.STAY();
             console.log("Starting STAY scene");
             break;
+        case config.Scene.COME :
+            stage.removeAllChildren();
+            currentScene = new scenes.COME();
+            console.log("Starting COME scene");
+            break;
+            //Scene 2A decisions
+        case config.Scene.SHOVEL :
+            stage.removeAllChildren();
+            currentScene = new scenes.SHOVEL();
+            console.log("Starting SHOVEL scene");
+            break;
+        case config.Scene.PICKAXE :
+            stage.removeAllChildren();
+            currentScene = new scenes.PICKAXE();
+            console.log("Starting SHOVEL scene");
+            break;
+            //Scene 2B decisions
+        case config.Scene.TORCH :
+            stage.removeAllChildren();
+            currentScene = new scenes.TORCH();
+            console.log("Starting SHOVEL scene");
+            break;
+        case config.Scene.LIGHT :
+            stage.removeAllChildren();
+            currentScene = new scenes.LIGHT();
+            console.log("Starting SHOVEL scene");
+            break;
+        case config.Scene.LEFTA :
+            stage.removeAllChildren();
+            currentScene = new scenes.LEFTA();
+            console.log("Starting SHOVEL scene");
+            break;
+        case config.Scene.RIGHTA :
+            stage.removeAllChildren();
+            currentScene = new scenes.RIGHTA();
+            console.log("Starting SHOVEL scene");
+            break;
+        case config.Scene.LEFTB :
+            stage.removeAllChildren();
+            currentScene = new scenes.LEFTB();
+            console.log("Starting SHOVEL scene");
+            break;
+        case config.Scene.RIGHTB :
+            stage.removeAllChildren();
+            currentScene = new scenes.RIGHTB();
+            console.log("Starting SHOVEL scene");
+            break;
+        case config.Scene.LEFTC :
+            stage.removeAllChildren();
+            currentScene = new scenes.LEFTC();
+            console.log("Starting SHOVEL scene");
+            break;
+        case config.Scene.RIGHTC :
+            stage.removeAllChildren();
+            currentScene = new scenes.RIGHTC();
+            console.log("Starting SHOVEL scene");
+            break;
+        case config.Scene.LEFTD :
+            stage.removeAllChildren();
+            currentScene = new scenes.LEFTD();
+            console.log("Starting SHOVEL scene");
+            break;
+        case config.Scene.RIGHTD :
+            stage.removeAllChildren();
+            currentScene = new scenes.RIGHTD();
+            console.log("Starting SHOVEL scene");
+            break;
+      
     }
     
 }

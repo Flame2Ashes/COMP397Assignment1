@@ -11,6 +11,8 @@ var scene: number;
 // Game scenes
 var menuScene : scenes.Menu;
 var gameScene : scenes.Game;
+var COMEScene : scenes.COME;
+var STAYScene : scenes.STAY;
 
 // Preload Assets required
 var assetData:objects.Asset[] = [
@@ -18,7 +20,10 @@ var assetData:objects.Asset[] = [
     {id: "Back", src:"../../Assets/images/Back.png"},
     {id: "BG", src:"../../Assets/images/bg.png"},
     {id: "GameOver", src:"../../Assets/images/gameover.png"},
-    {id: "Mario", src:"../../Assets/images/mario.png"}
+    {id: "Mario", src:"../../Assets/images/mario.png"},
+    {id: "CaveEntrance", src: "../../Assets/images/CaveEntrance.jpg"},
+    {id: "COME", src: "../../Assets/images/COME.png"},
+    {id: "STAY", src: "../../Assets/images/STAY.png"}
 ];
 
 function preload() {
@@ -77,6 +82,16 @@ function changeScene() : void {
             stage.removeAllChildren();
             currentScene = new scenes.Gameover();
             console.log("Starting GAMEOVER scene");
+            break;
+        case config.Scene.COME :
+            stage.removeAllChildren();
+            currentScene = new scenes.COME();
+            console.log("Starting COME scene");
+            break;
+        case config.Scene.STAY :
+            stage.removeAllChildren();
+            currentScene = new scenes.STAY();
+            console.log("Starting STAY scene");
             break;
     }
     

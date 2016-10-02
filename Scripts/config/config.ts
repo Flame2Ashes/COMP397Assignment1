@@ -6,6 +6,9 @@ module config {
         public static MENU : number = 0;
         public static GAME : number = 1;
         public static GAMEOVER : number = 2;
+        //Scene 1 decisions
+        public static STAY : number = 3;
+        public static COME : number = 4;
     }
 
     export class Screen {

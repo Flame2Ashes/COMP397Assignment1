@@ -1,21 +1,27 @@
-/*
-    Scene  module to group all user-defined scenes  under the same "namespace aka module"
-    Game scene that contains all assets and functionality associated with the game itself
-*/
+//Decision made: COME
+/*"Alright," you finally say. "You can come along."
 
-//Intro scene
-/*A few days ago, you and your brother discovered a cave. You didn't go into the cave, but you are pretty sure that there is something inside that cave. 
-You planned to go alone, but your brother ended up following you.
+Your brother's face instantly lit up.
 
-"Come on!" He said. "You never let me go anywhere with you!"
+"But you have to stay close, okay?"
 
-"You're too young," you reply. "What if there's something dangerous in the cave?"
+"Okay!"
 
-"I can take care of myself," your brother says, puffing up his chest. "Can't I go with you this one time?"
+And with that, you both enter the cave.
+
+Something something.
+
+"Hey, look!" Your brother says. "Someone left a shovel and a pickaxe here."
+
+You look over, and there is indeed a shovel and a pickaxe, slightly buried under some rubble and...something you definitely hope isn't a dead person.
+
+"We should take them," you say. "You never know if we might need them."
+
+You can give your brother either the shovel or the pickaxe to hold. You decide to give him:
 */
 
 module scenes {
-    export class Game extends objects.Scene {
+    export class COME extends objects.Scene {
 
         // PRIVATE VARIABLES
         private _gameLabel : objects.Label; //Text

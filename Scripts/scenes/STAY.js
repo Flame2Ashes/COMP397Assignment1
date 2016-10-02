@@ -1,37 +1,32 @@
-/*
-    Scene  module to group all user-defined scenes  under the same "namespace aka module"
-    Game scene that contains all assets and functionality associated with the game itself
+//Decision made: STAY
+/*"No."
+
+"But-"
+
+"//No//, and that's final. Just stay here and watch, okay?"
+
+Your brother dejectedly kicks a stone. "Fine, okay."
+
+And with that, you enter the cave.
+
+The further you get from the mouth of the cave, the darker it gets. Eventually it is pitch black, but you see that there is a faint, but clear light in the distance. You can feasibly walk towards it, but you are not sure whether there are other things in the cave.
 */
-
-//Intro scene
-/*A few days ago, you and your brother discovered a cave. You didn't go into the cave, but you are pretty sure that there is something inside that cave. 
-You planned to go alone, but your brother ended up following you.
-
-"Come on!" He said. "You never let me go anywhere with you!"
-
-"You're too young," you reply. "What if there's something dangerous in the cave?"
-
-"I can take care of myself," your brother says, puffing up his chest. "Can't I go with you this one time?"
-*/
-
-module scenes {
-    export class Game extends objects.Scene {
-
-        // PRIVATE VARIABLES
-        private _gameLabel : objects.Label; //Text
-        private _gameButton1 : objects.Button; //Option 1
-        private _gameButton2 : objects.Button; //Option 2
-        private _gamebg : createjs.Bitmap; //The background
-
-        constructor() {
-            super();
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var scenes;
+(function (scenes) {
+    var STAY = (function (_super) {
+        __extends(STAY, _super);
+        function STAY() {
+            _super.call(this);
         }
-
         // PUBLIC FUNCTIONS
-        public start() : void {
+        STAY.prototype.start = function () {
             // Add objects to the scene
             console.log("Game scene started");
-
             //Add background
             this._gamebg = new createjs.Bitmap(assets.getResult("CaveEntrance"));
             this._gamebg.alpha = 0.5;
@@ -39,33 +34,30 @@ module scenes {
             // Create Label for scene and add to Game Scene container
             this._gameLabel = new objects.Label("Test test test", "40px Consolar", "#000000", config.Screen.CENTER_X, 10);
             this.addChild(this._gameLabel);
-
             // Create buttons for scene and add to Game Scene container. Register for onclick events
             this._gameButton1 = new objects.Button("STAY", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
             this.addChild(this._gameButton1);
             this._gameButton1.on("click", this._onButton1Click, this);
-
             this._gameButton2 = new objects.Button("COME", 50, 100);
             this.addChild(this._gameButton2);
             this._gameButton2.on("click", this._onButton2Click, this);
-
             // Add gamescene to main stage container. 
             stage.addChild(this);
-        }
-
-        public update() : void {
+        };
+        STAY.prototype.update = function () {
             // Update objects
-        }
-
-        private _onButton1Click(event : createjs.MouseEvent) {
+        };
+        STAY.prototype._onButton1Click = function (event) {
             // Set global variable to Menu Scene and call changescene function
             scene = config.Scene.STAY;
             changeScene();
-        }
-
-        private _onButton2Click(event : createjs.MouseEvent) {
+        };
+        STAY.prototype._onButton2Click = function (event) {
             scene = config.Scene.COME;
             changeScene();
-        }
-    }
-}
+        };
+        return STAY;
+    })(objects.Scene);
+    scenes.STAY = STAY;
+})(scenes || (scenes = {}));
+//# sourceMappingURL=STAY.js.map

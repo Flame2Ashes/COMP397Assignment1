@@ -9,6 +9,9 @@ var config;
         Scene.MENU = 0;
         Scene.GAME = 1;
         Scene.GAMEOVER = 2;
+        //Scene 1 decisions
+        Scene.STAY = 3;
+        Scene.COME = 4;
         return Scene;
     })();
     config.Scene = Scene;

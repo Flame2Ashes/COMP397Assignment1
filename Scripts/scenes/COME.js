@@ -1,31 +1,38 @@
-/*
-    Scene  module to group all user-defined scenes  under the same "namespace aka module"
-    Game scene that contains all assets and functionality associated with the game itself
+//Decision made: COME
+/*"Alright," you finally say. "You can come along."
+
+Your brother's face instantly lit up.
+
+"But you have to stay close, okay?"
+
+"Okay!"
+
+And with that, you both enter the cave.
+
+Something something.
+
+"Hey, look!" Your brother says. "Someone left a shovel and a pickaxe here."
+
+You look over, and there is indeed a shovel and a pickaxe, slightly buried under some rubble and...something you definitely hope isn't a dead person.
+
+"We should take them," you say. "You never know if we might need them."
+
+You can give your brother either the shovel or the pickaxe to hold. You decide to give him:
 */
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-//Intro scene
-/*A few days ago, you and your brother discovered a cave. You didn't go into the cave, but you are pretty sure that there is something inside that cave.
-You planned to go alone, but your brother ended up following you.
-
-"Come on!" He said. "You never let me go anywhere with you!"
-
-"You're too young," you reply. "What if there's something dangerous in the cave?"
-
-"I can take care of myself," your brother says, puffing up his chest. "Can't I go with you this one time?"
-*/
 var scenes;
 (function (scenes) {
-    var Game = (function (_super) {
-        __extends(Game, _super);
-        function Game() {
+    var COME = (function (_super) {
+        __extends(COME, _super);
+        function COME() {
             _super.call(this);
         }
         // PUBLIC FUNCTIONS
-        Game.prototype.start = function () {
+        COME.prototype.start = function () {
             // Add objects to the scene
             console.log("Game scene started");
             //Add background
@@ -45,20 +52,20 @@ var scenes;
             // Add gamescene to main stage container. 
             stage.addChild(this);
         };
-        Game.prototype.update = function () {
+        COME.prototype.update = function () {
             // Update objects
         };
-        Game.prototype._onButton1Click = function (event) {
+        COME.prototype._onButton1Click = function (event) {
             // Set global variable to Menu Scene and call changescene function
             scene = config.Scene.STAY;
             changeScene();
         };
-        Game.prototype._onButton2Click = function (event) {
+        COME.prototype._onButton2Click = function (event) {
             scene = config.Scene.COME;
             changeScene();
         };
-        return Game;
+        return COME;
     })(objects.Scene);
-    scenes.Game = Game;
+    scenes.COME = COME;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=game.js.map
+//# sourceMappingURL=COME.js.map

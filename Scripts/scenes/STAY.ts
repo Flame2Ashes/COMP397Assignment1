@@ -1,23 +1,20 @@
-/*
-    Scene  module to group all user-defined scenes  under the same "namespace aka module"
-    Game scene that contains all assets and functionality associated with the game itself
-*/
+//Decision made: STAY
+/*"No."
 
-//Intro scene
-/*A few days ago, you and your brother discovered a cave. You didn't go into the cave, but you are pretty sure that there is something inside that cave. 
-You planned to go alone, but your brother ended up following you.
+"But-"
 
-"Come on!" He said. "You never let me go anywhere with you!"
+"//No//, and that's final. Just stay here and watch, okay?"
 
-"You're too young," you reply. "What if there's something dangerous in the cave?"
+Your brother dejectedly kicks a stone. "Fine, okay."
 
-"I can take care of myself," your brother says, puffing up his chest. "Can't I go with you this one time?"
+And with that, you enter the cave.
+
+The further you get from the mouth of the cave, the darker it gets. Eventually it is pitch black, but you see that there is a faint, but clear light in the distance. You can feasibly walk towards it, but you are not sure whether there are other things in the cave.
 */
 
 module scenes {
-    export class Game extends objects.Scene {
-
-        // PRIVATE VARIABLES
+    export class STAY extends objects.Scene {
+         // PRIVATE VARIABLES
         private _gameLabel : objects.Label; //Text
         private _gameButton1 : objects.Button; //Option 1
         private _gameButton2 : objects.Button; //Option 2

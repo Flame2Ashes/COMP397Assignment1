@@ -23,10 +23,10 @@ var scenes;
             this._gameLabel1 = new objects.Label("You gave your brother the shovel.", "30px Consolar", "#000000", config.Screen.CENTER_X, 10);
             this.addChild(this._gameLabel1);
             // Create buttons for scene and add to Game Scene container. Register for onclick events
-            this._gameButton1 = new objects.Button("LEFT", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 150);
+            this._gameButton1 = new objects.Button("RIGHT", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 150);
             this.addChild(this._gameButton1);
             this._gameButton1.on("click", this._onButton1Click, this);
-            this._gameButton2 = new objects.Button("RIGHT", 120, config.Screen.CENTER_Y + 150);
+            this._gameButton2 = new objects.Button("LEFT", 120, config.Screen.CENTER_Y + 150);
             this.addChild(this._gameButton2);
             this._gameButton2.on("click", this._onButton2Click, this);
             // Add gamescene to main stage container. 
@@ -37,11 +37,11 @@ var scenes;
         };
         SHOVEL.prototype._onButton1Click = function (event) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.LEFTA;
+            scene = config.Scene.RIGHTB;
             changeScene();
         };
         SHOVEL.prototype._onButton2Click = function (event) {
-            scene = config.Scene.RIGHTA;
+            scene = config.Scene.LEFTB;
             changeScene();
         };
         return SHOVEL;

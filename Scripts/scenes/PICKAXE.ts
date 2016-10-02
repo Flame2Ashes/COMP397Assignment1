@@ -1,3 +1,5 @@
+//Decision Tree: COME > GIVE PICKAXE
+
 module scenes {
     export class PICKAXE extends objects.Scene {
          // PRIVATE VARIABLES
@@ -20,7 +22,7 @@ module scenes {
             this._gamebg.alpha = 0.5;
             this.addChild(this._gamebg);
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("Test test test", "40px Consolar", "#000000", config.Screen.CENTER_X, 10);
+            this._gameLabel = new objects.Label("You gave your brother the pickaxe.", "40px Consolar", "#000000", config.Screen.CENTER_X, 10);
             this.addChild(this._gameLabel);
 
             // Create buttons for scene and add to Game Scene container. Register for onclick events

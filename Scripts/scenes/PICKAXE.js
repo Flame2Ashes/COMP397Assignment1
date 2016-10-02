@@ -1,3 +1,4 @@
+//Decision Tree: COME > GIVE PICKAXE
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -19,7 +20,7 @@ var scenes;
             this._gamebg.alpha = 0.5;
             this.addChild(this._gamebg);
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("Test test test", "40px Consolar", "#000000", config.Screen.CENTER_X, 10);
+            this._gameLabel = new objects.Label("You gave your brother the pickaxe.", "40px Consolar", "#000000", config.Screen.CENTER_X, 10);
             this.addChild(this._gameLabel);
             // Create buttons for scene and add to Game Scene container. Register for onclick events
             this._gameButton1 = new objects.Button("LEFT", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 150);

@@ -40,7 +40,7 @@ var scenes;
             this._gamebg.alpha = 0.5;
             this.addChild(this._gamebg);
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("Test test test", "40px Consolar", "#000000", config.Screen.CENTER_X, 10);
+            this._gameLabel = new objects.Label("You allowed your brother to come.", "40px Consolar", "#000000", config.Screen.CENTER_X, 10);
             this.addChild(this._gameLabel);
             // Create buttons for scene and add to Game Scene container. Register for onclick events
             this._gameButton1 = new objects.Button("PICKAXE", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 150);

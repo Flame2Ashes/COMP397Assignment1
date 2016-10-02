@@ -1,7 +1,7 @@
-//Decision tree: STAY > LIGHT TORCH
+//Decision tree: STAY > DON'T LIGHT
 
 module scenes {
-    export class TORCH extends objects.Scene {
+    export class LIGHT extends objects.Scene {
 
         // PRIVATE VARIABLES
         private _gameLabel1 : objects.Label; //Text line 1
@@ -17,14 +17,14 @@ module scenes {
         // PUBLIC FUNCTIONS
         public start() : void {
             // Add objects to the scene
-            console.log("Decision made: LIGHT TORCH. Scene started");
+            console.log("Decision made: DON'T LIGHT. Scene started");
 
             //Add background
             this._gamebg = new createjs.Bitmap(assets.getResult("Scene3"));
             this._gamebg.alpha = 0.5;
             this.addChild(this._gamebg);
             // Create Label for scene and add to Game Scene container
-            this._gameLabel1 = new objects.Label("You light a torch.", "30px Consolar", "#000000", config.Screen.CENTER_X, 10);
+            this._gameLabel1 = new objects.Label("You continue walking down the cave.", "30px Consolar", "#000000", config.Screen.CENTER_X, 10);
             this.addChild(this._gameLabel1);
 
             // Create buttons for scene and add to Game Scene container. Register for onclick events
@@ -46,12 +46,12 @@ module scenes {
 
         private _onButton1Click(event : createjs.MouseEvent) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.LEFTC;
+            scene = config.Scene.LEFTD;
             changeScene();
         }
 
         private _onButton2Click(event : createjs.MouseEvent) {
-            scene = config.Scene.RIGHTC;
+            scene = config.Scene.LEFTD;
             changeScene();
         }
     }

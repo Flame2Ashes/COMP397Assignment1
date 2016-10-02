@@ -1,58 +1,51 @@
-//Decision tree: STAY > LIGHT TORCH
-
-module scenes {
-    export class TORCH extends objects.Scene {
-
-        // PRIVATE VARIABLES
-        private _gameLabel1 : objects.Label; //Text line 1
-        private _gameLabel2 : objects.Label; //Text line 2
-        private _gameButton1 : objects.Button; //Option 1
-        private _gameButton2 : objects.Button; //Option 2
-        private _gamebg : createjs.Bitmap; //The background
-
-        constructor() {
-            super();
+//Decision tree: STAY > DON'T LIGHT
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var scenes;
+(function (scenes) {
+    var LIGHT = (function (_super) {
+        __extends(LIGHT, _super);
+        function LIGHT() {
+            _super.call(this);
         }
-
         // PUBLIC FUNCTIONS
-        public start() : void {
+        LIGHT.prototype.start = function () {
             // Add objects to the scene
-            console.log("Decision made: LIGHT TORCH. Scene started");
-
+            console.log("Decision made: DON'T LIGHT. Scene started");
             //Add background
             this._gamebg = new createjs.Bitmap(assets.getResult("Scene3"));
             this._gamebg.alpha = 0.5;
             this.addChild(this._gamebg);
             // Create Label for scene and add to Game Scene container
-            this._gameLabel1 = new objects.Label("You light a torch.", "30px Consolar", "#000000", config.Screen.CENTER_X, 10);
+            this._gameLabel1 = new objects.Label("You continue walking down the cave.", "30px Consolar", "#000000", config.Screen.CENTER_X, 10);
             this.addChild(this._gameLabel1);
-
             // Create buttons for scene and add to Game Scene container. Register for onclick events
             this._gameButton1 = new objects.Button("LEFT", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 150);
             this.addChild(this._gameButton1);
             this._gameButton1.on("click", this._onButton1Click, this);
-
             this._gameButton2 = new objects.Button("RIGHT", 120, config.Screen.CENTER_Y + 150);
             this.addChild(this._gameButton2);
             this._gameButton2.on("click", this._onButton2Click, this);
-
             // Add gamescene to main stage container. 
             stage.addChild(this);
-        }
-
-        public update() : void {
+        };
+        LIGHT.prototype.update = function () {
             // Update objects
-        }
-
-        private _onButton1Click(event : createjs.MouseEvent) {
+        };
+        LIGHT.prototype._onButton1Click = function (event) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.LEFTC;
+            scene = config.Scene.LEFTD;
             changeScene();
-        }
-
-        private _onButton2Click(event : createjs.MouseEvent) {
-            scene = config.Scene.RIGHTC;
+        };
+        LIGHT.prototype._onButton2Click = function (event) {
+            scene = config.Scene.LEFTD;
             changeScene();
-        }
-    }
-}
+        };
+        return LIGHT;
+    })(objects.Scene);
+    scenes.LIGHT = LIGHT;
+})(scenes || (scenes = {}));
+//# sourceMappingURL=LIGHT.js.map

@@ -14,7 +14,7 @@ var scenes;
         // PUBLIC FUNCTIONS
         PICKAXE.prototype.start = function () {
             // Add objects to the scene
-            console.log("Game scene started");
+            console.log("Decision made: Pickaxe. Scene started");
             //Add background
             this._gamebg = new createjs.Bitmap(assets.getResult("Scene3"));
             this._gamebg.alpha = 0.5;

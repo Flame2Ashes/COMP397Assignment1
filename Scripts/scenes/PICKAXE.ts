@@ -15,7 +15,7 @@ module scenes {
         // PUBLIC FUNCTIONS
         public start() : void {
             // Add objects to the scene
-            console.log("Game scene started");
+            console.log("Decision made: Pickaxe. Scene started");
 
             //Add background
             this._gamebg = new createjs.Bitmap(assets.getResult("Scene3"));

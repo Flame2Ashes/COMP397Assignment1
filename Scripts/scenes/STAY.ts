@@ -38,11 +38,11 @@ module scenes {
             this.addChild(this._gameLabel);
 
             // Create buttons for scene and add to Game Scene container. Register for onclick events
-            this._gameButton1 = new objects.Button("TORCH", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 150);
+            this._gameButton1 = new objects.Button("LIGHT", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 150);
             this.addChild(this._gameButton1);
             this._gameButton1.on("click", this._onButton1Click, this);
 
-            this._gameButton2 = new objects.Button("LIGHT", 120, config.Screen.CENTER_Y + 150);
+            this._gameButton2 = new objects.Button("TORCH", 120, config.Screen.CENTER_Y + 150);
             this.addChild(this._gameButton2);
             this._gameButton2.on("click", this._onButton2Click, this);
 
@@ -56,12 +56,12 @@ module scenes {
 
         private _onButton1Click(event : createjs.MouseEvent) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.TORCH;
+            scene = config.Scene.LIGHT;
             changeScene();
         }
 
         private _onButton2Click(event : createjs.MouseEvent) {
-            scene = config.Scene.LIGHT;
+            scene = config.Scene.TORCH;
             changeScene();
         }
     }

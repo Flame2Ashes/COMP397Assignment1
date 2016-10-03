@@ -5,28 +5,27 @@ module config {
     export class Scene {
         public static MENU : number = 0;
         public static GAME : number = 1;
-        public static GAMEOVER : number = 2;
         //Scene 1 decisions
-        public static STAY : number = 3;
-        public static COME : number = 4;
+        public static STAY : number = 2;
+        public static COME : number = 3;
         //Scene 2A decisions
-        public static SHOVEL : number = 5;
-        public static PICKAXE : number = 6;
+        public static SHOVEL : number = 4;
+        public static PICKAXE : number = 5;
         //Scene 2B decisions
-        public static TORCH : number = 7;
-        public static LIGHT : number = 8;
+        public static TORCH : number = 6;
+        public static LIGHT : number = 7;
         //Scene 3A decisions
-        public static LEFTA : number = 9;
-        public static RIGHTA : number = 10;
+        public static LEFTA : number = 8;
+        public static RIGHTA : number = 9;
         //Scene 3B decisions
-        public static LEFTB : number = 11;
-        public static RIGHTB : number = 12;
+        public static LEFTB : number = 10;
+        public static RIGHTB : number = 11;
         //Scene 3C decisions
-        public static LEFTC : number = 13;
-        public static RIGHTC : number = 14;
+        public static LEFTC : number = 12;
+        public static RIGHTC : number = 13;
         //Scene 3D decisions
-        public static LEFTD : number = 15;
-        public static RIGHTD : number = 16;
+        public static LEFTD : number = 14;
+        public static RIGHTD : number = 15;
 
     }
 

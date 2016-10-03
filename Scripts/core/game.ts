@@ -15,10 +15,6 @@ var gameScene : scenes.Game;
 // Preload Assets required
 var assetData:objects.Asset[] = [
     {id: "Start", src:"../../Assets/images/Start.png"}, 
-    {id: "Back", src:"../../Assets/images/Back.png"},
-    {id: "BG", src:"../../Assets/images/bg.png"},
-    {id: "GameOver", src:"../../Assets/images/gameover.png"},
-    {id: "Mario", src:"../../Assets/images/mario.png"},
     {id: "CaveEntrance", src: "../../Assets/images/CaveEntrance.jpg"},
     {id: "Scene2", src: "../../Assets/images/Scene2.jpg"},
     {id: "Scene3", src: "../../Assets/images/Scene3.jpg"},
@@ -86,11 +82,6 @@ function changeScene() : void {
             stage.removeAllChildren();
             currentScene = new scenes.Game();
             console.log("Starting GAME scene");
-            break;
-        case config.Scene.GAMEOVER :
-            stage.removeAllChildren();
-            currentScene = new scenes.Gameover();
-            console.log("Starting GAMEOVER scene");
             break;
             //Scene 1 decisions
         case config.Scene.STAY :

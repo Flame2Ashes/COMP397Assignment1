@@ -30,10 +30,6 @@ module scenes {
             this.addChild(this._menuButton);
             this._menuButton.on("click", this._startButtonClick, this);
 
-            this._menuButtonGameOver = new objects.Button("GameOver", config.Screen.CENTER_X, config.Screen.CENTER_Y - 180);
-            this.addChild(this._menuButtonGameOver);
-            this._menuButtonGameOver.on("click", this._gameOverButtonClick, this );
-
             // Add menu scene to global stage container
             stage.addChild(this);
         }
@@ -46,11 +42,6 @@ module scenes {
         private _startButtonClick(event : createjs.MouseEvent) {
             // Change global scene variable to GAME. Call global changeScene() function
             scene = config.Scene.GAME;
-            changeScene();
-        }
-
-        private _gameOverButtonClick(event: createjs.MouseEvent) {
-            scene = config.Scene.GAMEOVER;
             changeScene();
         }
     }

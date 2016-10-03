@@ -23,9 +23,6 @@ var scenes;
             this._menuButton = new objects.Button("Start", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
             this.addChild(this._menuButton);
             this._menuButton.on("click", this._startButtonClick, this);
-            this._menuButtonGameOver = new objects.Button("GameOver", config.Screen.CENTER_X, config.Screen.CENTER_Y - 180);
-            this.addChild(this._menuButtonGameOver);
-            this._menuButtonGameOver.on("click", this._gameOverButtonClick, this);
             // Add menu scene to global stage container
             stage.addChild(this);
         };
@@ -35,10 +32,6 @@ var scenes;
         Menu.prototype._startButtonClick = function (event) {
             // Change global scene variable to GAME. Call global changeScene() function
             scene = config.Scene.GAME;
-            changeScene();
-        };
-        Menu.prototype._gameOverButtonClick = function (event) {
-            scene = config.Scene.GAMEOVER;
             changeScene();
         };
         return Menu;

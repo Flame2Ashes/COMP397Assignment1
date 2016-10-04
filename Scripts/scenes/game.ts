@@ -2,17 +2,10 @@
     Scene  module to group all user-defined scenes  under the same "namespace aka module"
     Game scene that contains all assets and functionality associated with the game itself
 */
-
+//Source file: game.ts
+//Author name: Angelina Gutierrez
+//Last modified: October 3rd 2016
 //Intro scene
-/*A few days ago, you and your brother discovered a cave. You didn't go into the cave, but you are pretty sure that there is something inside that cave. 
-You planned to go alone, but your brother ended up following you.
-
-"Come on!" He said. "You never let me go anywhere with you!"
-
-"You're too young," you reply. "What if there's something dangerous in the cave?"
-
-"I can take care of myself," your brother says, puffing up his chest. "Can't I go with you this one time?"
-*/
 
 module scenes {
     export class Game extends objects.Scene {

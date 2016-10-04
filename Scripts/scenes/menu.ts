@@ -3,6 +3,10 @@
     Menu scene that contains all assets and functionality associated with the menu itself
 */
 
+//Source file: menu.ts
+//Author name: Angelina Gutierrez
+//Last modified: October 3rd 2016
+
 module scenes {
     export class Menu extends objects.Scene {
 
@@ -23,6 +27,7 @@ module scenes {
         public start() : void {
             console.log("Menu Scene Started");
 
+            //Add the background
             this._menuBG = new createjs.Bitmap(assets.getResult("MenuScreen"));
             this._menuBG.alpha = 0.5;
             this.addChild(this._menuBG);

@@ -1,3 +1,7 @@
+//Source file: LIGHT.ts
+//Author name: Angelina Gutierrez
+//Last modified: October 3rd 2016
+
 //Decision tree: STAY > DON'T LIGHT
 
 module scenes {

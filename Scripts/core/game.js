@@ -1,3 +1,7 @@
+//Source file: game.ts
+//Author name: Angelina Gutierrez
+//Last modified: October 3rd 2016
+//All Cave images taken from Google Images.
 /// <reference path = "_reference.ts" />
 // Global Variables
 var assets;

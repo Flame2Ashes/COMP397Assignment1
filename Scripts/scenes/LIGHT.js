@@ -1,9 +1,12 @@
-//Decision tree: STAY > DON'T LIGHT
+//Source file: LIGHT.ts
+//Author name: Angelina Gutierrez
+//Last modified: October 3rd 2016
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+//Decision tree: STAY > DON'T LIGHT
 var scenes;
 (function (scenes) {
     var LIGHT = (function (_super) {

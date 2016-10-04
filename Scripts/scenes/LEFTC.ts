@@ -1,3 +1,7 @@
+//Source file: LEFTC.ts
+//Author name: Angelina Gutierrez
+//Last modified: October 3rd 2016
+
 //Decision Tree: STAY > LIGHT TORCH > GO LEFT
 
 module scenes {

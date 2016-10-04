@@ -1,3 +1,7 @@
+//Source file: LEFTA.ts
+//Author name: Angelina Gutierrez
+//Last modified: October 3rd 2016
+
 //Decision Tree: COME > GIVE PICKAXE > GO LEFT
 
 module scenes {

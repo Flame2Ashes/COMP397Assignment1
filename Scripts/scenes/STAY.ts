@@ -1,3 +1,6 @@
+//Source file: STAY.ts
+//Author name: Angelina Gutierrez
+//Last modified: October 3rd 2016
 //Decision made: STAY
 
 module scenes {
@@ -18,7 +21,7 @@ module scenes {
         // PUBLIC FUNCTIONS
         public start() : void {
             // Add objects to the scene
-            console.log("Game scene started");
+            console.log("Decision made: STAY. Scene started");
 
             //Add background
             this._gamebg = new createjs.Bitmap(assets.getResult("Scene2"));

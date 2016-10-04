@@ -7,6 +7,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+//Source file: menu.ts
+//Author name: Angelina Gutierrez
+//Last modified: October 3rd 2016
 var scenes;
 (function (scenes) {
     var Menu = (function (_super) {
@@ -17,6 +20,7 @@ var scenes;
         }
         Menu.prototype.start = function () {
             console.log("Menu Scene Started");
+            //Add the background
             this._menuBG = new createjs.Bitmap(assets.getResult("MenuScreen"));
             this._menuBG.alpha = 0.5;
             this.addChild(this._menuBG);

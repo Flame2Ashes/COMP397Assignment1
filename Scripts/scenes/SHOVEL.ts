@@ -1,3 +1,7 @@
+//Source file: SHOVEL.ts
+//Author name: Angelina Gutierrez
+//Last modified: October 3rd 2016
+
 //Decision tree: COME > GIVE SHOVEL
 
 module scenes {

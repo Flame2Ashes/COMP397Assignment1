@@ -1,3 +1,7 @@
+//Source file: RIGHTD.ts
+//Author name: Angelina Gutierrez
+//Last modified: October 3rd 2016
+
 //Decision Tree: STAY > DON'T LIGHT > TURN RIGHT
 
 module scenes {

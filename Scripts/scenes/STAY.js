@@ -1,3 +1,6 @@
+//Source file: STAY.ts
+//Author name: Angelina Gutierrez
+//Last modified: October 3rd 2016
 //Decision made: STAY
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -14,7 +17,7 @@ var scenes;
         // PUBLIC FUNCTIONS
         STAY.prototype.start = function () {
             // Add objects to the scene
-            console.log("Game scene started");
+            console.log("Decision made: STAY. Scene started");
             //Add background
             this._gamebg = new createjs.Bitmap(assets.getResult("Scene2"));
             this._gamebg.alpha = 0.3;

@@ -1,3 +1,6 @@
+//Source file: PICKAXE.ts
+//Author name: Angelina Gutierrez
+//Last modified: October 3rd 2016
 //Decision Tree: COME > GIVE PICKAXE
 
 module scenes {

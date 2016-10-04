@@ -12,6 +12,7 @@ module scenes {
         private _menuButton : objects.Button;
         private _menuButtonGameOver : objects.Button;
         private _menuLabel : objects.Label;
+        private _menuBG : createjs.Bitmap;
 
         // Menu Class Contructor
         constructor()
@@ -22,7 +23,11 @@ module scenes {
         public start() : void {
             console.log("Menu Scene Started");
 
-            this._menuLabel = new objects.Label("AWESOME SAUCE", "Arial 60px", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._menuBG = new createjs.Bitmap(assets.getResult("MenuScreen"));
+            this._menuBG.alpha = 0.5;
+            this.addChild(this._menuBG);
+
+            this._menuLabel = new objects.Label("THE CAVE", "100px Arial", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
             this.addChild(this._menuLabel);
 
             // Add button to scene. Register for click callback function

@@ -17,7 +17,10 @@ var scenes;
         }
         Menu.prototype.start = function () {
             console.log("Menu Scene Started");
-            this._menuLabel = new objects.Label("AWESOME SAUCE", "Arial 60px", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._menuBG = new createjs.Bitmap(assets.getResult("MenuScreen"));
+            this._menuBG.alpha = 0.5;
+            this.addChild(this._menuBG);
+            this._menuLabel = new objects.Label("THE CAVE", "100px Arial", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
             this.addChild(this._menuLabel);
             // Add button to scene. Register for click callback function
             this._menuButton = new objects.Button("Start", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);

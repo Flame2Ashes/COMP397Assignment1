@@ -20,7 +20,7 @@ var scenes;
             this._gamebg.alpha = 0.3;
             this.addChild(this._gamebg);
             // Add text
-            this._gameLabel = new objects.Label("You turned right.", "40px Consolar", "#000000", config.Screen.CENTER_X, 10);
+            this._gameLabel = new objects.Label("You turned right.", "40px Consolar", "#000000", config.Screen.CENTER_X, 30);
             this.addChild(this._gameLabel);
             this._gameLabel2 = new objects.Label("You find a room piled high with treasure!", "20px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y - 100);
             this.addChild(this._gameLabel2);

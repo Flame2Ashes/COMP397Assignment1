@@ -1,30 +1,13 @@
 //Decision made: COME
-/*"Alright," you finally say. "You can come along."
-
-Your brother's face instantly lit up.
-
-"But you have to stay close, okay?"
-
-"Okay!"
-
-And with that, you both enter the cave.
-
-Something something.
-
-"Hey, look!" Your brother says. "Someone left a shovel and a pickaxe here."
-
-You look over, and there is indeed a shovel and a pickaxe, slightly buried under some rubble and...something you definitely hope isn't a dead person.
-
-"We should take them," you say. "You never know if we might need them."
-
-You can give your brother either the shovel or the pickaxe to hold. You decide to give him:
-*/
 
 module scenes {
     export class COME extends objects.Scene {
 
         // PRIVATE VARIABLES
-        private _gameLabel : objects.Label; //Text
+        private _gameLabel : objects.Label; //Text line 1
+        private _gameLabel1 : objects.Label; //Text line 2
+        private _gameLabel2 : objects.Label; //Text line 3
+        private _gameLabel3 : objects.Label; //Text line 4
         private _gameButton1 : objects.Button; //Option 1
         private _gameButton2 : objects.Button; //Option 2
         private _gamebg : createjs.Bitmap; //The background
@@ -41,11 +24,21 @@ module scenes {
 
             //Add background
             this._gamebg = new createjs.Bitmap(assets.getResult("Scene2"));
-            this._gamebg.alpha = 0.5;
+            this._gamebg.alpha = 0.3;
             this.addChild(this._gamebg);
-            // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("You allowed your brother to come.", "40px Consolar", "#000000", config.Screen.CENTER_X, 10);
+
+            // Add Text
+            this._gameLabel = new objects.Label("You allowed your brother to come.", "40px Consolar", "#000000", config.Screen.CENTER_X, 30);
             this.addChild(this._gameLabel);
+
+            this._gameLabel1 = new objects.Label("Delighted, he walks beside you as you enter the cave.", "20px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y - 100);
+            this.addChild(this._gameLabel1);
+
+            this._gameLabel2 = new objects.Label("A little further into the cave, your brother notices a dropped shovel and pickaxe.", "20px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y - 80);
+            this.addChild(this._gameLabel2);
+
+            this._gameLabel3 = new objects.Label("You take both, but you give your brother the: ", "30px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y - 40);
+            this.addChild(this._gameLabel3);
 
             // Create buttons for scene and add to Game Scene container. Register for onclick events
             this._gameButton1 = new objects.Button("PICKAXE", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 150);
